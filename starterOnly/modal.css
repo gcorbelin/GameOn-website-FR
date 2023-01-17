@@ -175,12 +175,17 @@ main {
   max-width: 500px;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
+  animation-fill-mode: forwards;
   background: #232323;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   color: #fff;
   padding-top: 10px;
+}
+
+.content.closing {
+  animation-name: modalclose;
 }
 
 .modal-body {
@@ -517,6 +522,14 @@ footer {
   }
 }
 
+.show {
+  transition: opacity 400ms;
+}
+
+.hide {
+  opacity: 0;
+}
+
 @keyframes modalopen {
   from {
     opacity: 0;
@@ -524,6 +537,16 @@ footer {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes modalclose {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-150px);
   }
 }
 
