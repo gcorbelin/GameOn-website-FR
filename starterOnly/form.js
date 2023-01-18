@@ -4,14 +4,14 @@ const lastInput = document.getElementById("last");
 const emailInput = document.getElementById("email");
 const birthdateInput = document.getElementById("birthdate");
 const quantityInput = document.getElementById("quantity");
+const radiosLegend = document.getElementById("location-legend");
 const checkbox1Input = document.getElementById("checkbox1");
 const checkbox2Input = document.getElementById("checkbox2");
 
 let isFormValid;
 
 // submit form event
-function validate(event) {
-  event.preventDefault();
+function validate() {
   isFormValid = true;
 
   // First Name check
@@ -35,7 +35,15 @@ function validate(event) {
   let isQuantityValid = validateNumber(quantityInput.value);
   handleError(quantityInput, isQuantityValid);
 
-  console.log(isFormValid);
+  // Radios check
+  let isRadioValid = validateRadio('input[name="location"]:checked');
+  handleError(radiosLegend, isRadioValid);
+
+  // CGU check
+  let isCGUValid = validateCGU(checkbox1Input);
+  handleError(checkbox1Input, isCGUValid);
+
+  return isFormValid;
 }
 
 /*
@@ -86,8 +94,16 @@ function validateNumber(number) {
   return false;
 }
 
-// Check radio selected :
-// If document.querySelector('input[name="location"]:checked'); returns !null then return true, else return false
+function validateRadio(radios) {
+  if (document.querySelector(radios)) {
+    return true;
+  }
+  return false;
+}
 
-// Check checkbox selected
-// If document.getElementById('checkbox1').checked returns !null then return true, else return false
+function validateCGU(checkbox) {
+  if (checkbox.checked) {
+    return true;
+  }
+  return false;
+}
