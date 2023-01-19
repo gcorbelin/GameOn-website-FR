@@ -7,11 +7,14 @@ const quantityInput = document.getElementById("quantity");
 const radiosLegend = document.getElementById("location-legend");
 const checkbox1Input = document.getElementById("checkbox1");
 const checkbox2Input = document.getElementById("checkbox2");
+// const form = document.getElementsByName("reserve"); // Already defined in modal.js
+// const confirmation = document.getElementById("confirmation-message"); // Already defined in modal.js
 
 let isFormValid;
 
 // submit form event
-function validate() {
+function validate(event) {
+  event.preventDefault();
   isFormValid = true;
 
   // First Name check
@@ -43,7 +46,10 @@ function validate() {
   let isCGUValid = validateCGU(checkbox1Input);
   handleError(checkbox1Input, isCGUValid);
 
-  return isFormValid;
+  if (isFormValid) {
+    form.classList.add("d-none");
+    confirmation.classList.remove("d-none");
+  }
 }
 
 /*
@@ -62,7 +68,7 @@ function handleError(elem, isValid) {
 }
 
 function validateLength(string) {
-  if (string.length > 2) {
+  if (string.length >= 2) {
     return true;
   }
   return false;
@@ -75,7 +81,6 @@ function validateEmail(email) {
 }
 
 function validateDate(date) {
-  console.log(date);
   // First we check the format
   var regEx = /^\d{4}-\d{2}-\d{2}$/; // Date format yyyy-mm-dd as per HTML5 specs
   if (!date.match(regEx)) return false; // Invalid format

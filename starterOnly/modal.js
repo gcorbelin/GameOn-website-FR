@@ -13,6 +13,8 @@ const modalContent = document.querySelector(".bground .content");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const modalBtnClose = document.querySelectorAll(".close");
+const form = document.getElementById("reserve");
+const confirmation = document.getElementById("confirmation-message");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -35,5 +37,7 @@ function closeModal() {
   window.setTimeout(function () {
     modalbg.style.display = "none";
     modalContent.classList.remove("closing");
+    form.classList.remove("d-none");
+    confirmation.classList.add("d-none");
   }, 800);
 }
