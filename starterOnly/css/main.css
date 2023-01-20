@@ -30,6 +30,7 @@ body {
 }
 body.modal-opened {
   overflow: hidden;
+  padding-right: 17px;
 }
 
 p {
@@ -133,8 +134,73 @@ img {
     display: none;
   }
   .main-navbar .icon {
+    position: relative;
     display: block;
+    width: 47px;
+    height: 40px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
   }
+  .main-navbar .icon span {
+    display: block;
+    position: absolute;
+    left: 14px;
+    height: 2px;
+    width: 19px;
+    background: #fe142f;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+  .main-navbar .icon span:nth-child(1) {
+    top: 13px;
+  }
+  .main-navbar .icon span:nth-child(2),
+  .main-navbar .icon span:nth-child(3) {
+    top: 18px;
+  }
+  .main-navbar .icon span:nth-child(4) {
+    top: 25px;
+  }
+  .main-navbar .icon:hover span {
+    background-color: #fff;
+  }
+  .responsive .main-navbar .icon span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+  .responsive .main-navbar .icon span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .responsive .main-navbar .icon span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .responsive .main-navbar .icon span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
   .topnav.responsive {
     position: relative;
   }

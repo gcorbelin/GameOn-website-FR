@@ -5,13 +5,13 @@
   <meta charset="utf-8" />
   <title>Reservation</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="modal.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@500&display=swap"
     rel="stylesheet">
+  <!-- Custom style-->
+  <link rel="stylesheet" href="./css/main.css" />
 </head>
 
 <body>
@@ -19,7 +19,7 @@
     <div class="container">
       <div class="topnav" id="myTopnav">
         <div class="header-logo">
-          <img alt="logo" src="Logo.png" width="auto" height="auto" />
+          <img alt="logo" src="./assets/Logo.png" width="auto" height="auto" />
         </div>
         <nav class="main-navbar" role="list">
           <a href="#" role="listitem" class="active"><span>Détails de l'évènement</span></a>
@@ -27,7 +27,10 @@
           <a href="#" role="listitem"><span>Contact</span></a>
           <a href="#" role="listitem"><span>Évènements passés</span></a>
           <a href="javascript:void(0);" class="icon" onclick="editNav()">
-            <i class="fa fa-bars"></i>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </a>
         </nav>
       </div>
@@ -50,7 +53,7 @@
           </button>
         </div>
         <div class="hero-img">
-          <img src="./bg_img.jpg" alt="img" />
+          <img src="./assets/bg_img.jpg" alt="img" />
         </div>
         <button class="btn btn-signup js-modal-btn">
           je m'inscris
@@ -165,8 +168,7 @@
       </p>
     </div>
   </footer>
-  <script src="modal.js"></script>
-  <script src="form.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
