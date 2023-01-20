@@ -8,10 +8,11 @@ function editNav() {
 }
 
 // DOM Elements
+const body = document.body;
 const modalbg = document.querySelector(".bground");
 const modalContent = document.querySelector(".bground .content");
 const modalBtn = document.querySelectorAll(".js-modal-btn");
-const formData = document.querySelectorAll(".formData");
+const formData = document.querySelectorAll(".form-data");
 const modalBtnClose = document.querySelectorAll(".js-close");
 const form = document.getElementById("reserve");
 const confirmation = document.getElementById("confirmation-message");
@@ -21,6 +22,7 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
 // launch modal form
 function launchModal() {
+  body.classList.add("modal-opened");
   modalbg.style.display = "block";
   modalbg.classList.replace("hide", "show");
 }
@@ -39,5 +41,6 @@ function closeModal() {
     modalContent.classList.remove("closing");
     form.classList.remove("d-none");
     confirmation.classList.add("d-none");
+    body.classList.remove("modal-opened");
   }, 800);
 }

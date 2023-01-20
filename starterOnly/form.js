@@ -60,8 +60,10 @@ function handleError(elem, isValid) {
     elem.getAttribute("aria-describedby")
   );
   if (isValid) {
+    elem.classList.remove("has-error");
     errorcontainer.classList.add("d-none");
   } else {
+    elem.classList.add("has-error");
     errorcontainer.classList.remove("d-none");
     isFormValid = false;
   }
