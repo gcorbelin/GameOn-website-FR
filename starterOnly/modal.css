@@ -138,28 +138,36 @@ main {
   border-radius: 8px;
 }
 
-.modal-btn {
-  font-size: 145%;
-  background: #fe142f;
-  display: flex;
-  margin: auto;
-  padding: 2em;
-  color: #fff;
-  padding: 0.75rem 2.5rem;
-  border-radius: 1rem;
-  cursor: pointer;
-}
-
-.modal-btn:hover {
-  background: #3876ac;
-}
 @media screen and (max-width: 767px) {
   main {
     margin: 0;
   }
 }
 
-/* Modal form */
+/* Buttons */
+.btn {
+  display: block;
+  margin: 0 auto;
+  padding: 2em;
+  padding: 0.75rem 2.5rem;
+  border: 0;
+  border-radius: 8px;
+  background: #fe142f;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #3876ac;
+}
+
+.btn-lg {
+  font-size: 1.5625rem;
+}
+
 .button {
   background: #fe142f;
   margin-top: 0.5em;
@@ -174,10 +182,27 @@ main {
   background: #3876ac;
 }
 
-.smFont {
-  font-size: 16px;
+.btn-signup {
+  margin: 0;
+  text-transform: capitalize;
 }
 
+.btn-submit {
+  padding: 12px 24px;
+  min-width: 182px;
+}
+
+@media screen and (max-width: 767px) {
+  .btn-lg {
+    font-size: 0.875rem;
+  }
+  .btn-submit {
+    padding: 7px 24px;
+    min-width: 140px;
+  }
+}
+
+/* Modal form */
 .bground {
   display: none;
   position: fixed;
@@ -347,18 +372,6 @@ input[data-error]::after {
 .close:after {
   transform: rotate(-45deg);
 }
-.btn-submit,
-.btn-signup {
-  background: #fe142f;
-  display: block;
-  margin: 0 auto;
-  border-radius: 7px;
-  font-size: 1rem;
-  padding: 12px 82px;
-  color: #fff;
-  cursor: pointer;
-  border: 0;
-}
 
 .text-label {
   font-weight: normal;
@@ -397,11 +410,7 @@ input[data-error]::after {
   font-weight: normal;
 }
 .btn-signup {
-  margin: 0;
   padding: 14px 30px;
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-transform: capitalize;
 }
 .hero-img {
   width: 100%;
@@ -455,7 +464,6 @@ input[data-error]::after {
     display: block;
     margin: 29px auto;
     padding: 7px 34px;
-    font-size: 0.875rem;
   }
   .copyrights {
     font-size: 0.625rem;

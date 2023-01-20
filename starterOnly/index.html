@@ -40,21 +40,21 @@
           Vous aimez jouer ? Notre prochain évènement gaming est ouvert
           aux réservations... Places limitées !
         </p>
-        <button class="btn-signup modal-btn">
+        <button class="btn btn-lg btn-signup js-modal-btn">
           je m'inscris
         </button>
       </div>
       <div class="hero-img">
         <img src="./bg_img.jpg" alt="img" />
       </div>
-      <button class="btn-signup modal-btn">
+      <button class="btn btn-signup js-modal-btn">
         je m'inscris
       </button>
     </div>
 
     <div class="bground hide">
       <div class="content">
-        <span class="close"></span>
+        <span class="close js-close"></span>
         <div class="modal-body">
           <form id="reserve" name="reserve" action="index.html" method="get" onsubmit="validate(event);">
             <div class="formData">
@@ -133,11 +133,11 @@
               </label>
               <br>
             </div>
-            <input class="btn-submit" type="submit" class="button" value="C'est parti">
+            <input class="btn btn-submit" type="submit" class="button" value="C'est parti">
           </form>
           <div id="confirmation-message" class="d-none">
             <p>Merci pour votre inscription</p>
-            <button type="button" class="btn-submit close">Fermer</button>
+            <button type="button" class="btn btn-submit js-close">Fermer</button>
           </div>
         </div>
       </div>
