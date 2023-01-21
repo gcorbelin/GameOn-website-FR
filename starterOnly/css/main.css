@@ -170,7 +170,7 @@ img {
   }
   .main-navbar .icon span:nth-child(2),
   .main-navbar .icon span:nth-child(3) {
-    top: 18px;
+    top: 19px;
   }
   .main-navbar .icon span:nth-child(4) {
     top: 25px;
@@ -179,8 +179,8 @@ img {
     background-color: #fff;
   }
   .responsive .main-navbar .icon span:nth-child(1) {
-    top: 18px;
-    width: 0%;
+    top: 19px;
+    width: 0;
     left: 50%;
   }
   .responsive .main-navbar .icon span:nth-child(2) {
@@ -197,7 +197,7 @@ img {
   }
   .responsive .main-navbar .icon span:nth-child(4) {
     top: 18px;
-    width: 0%;
+    width: 0;
     left: 50%;
   }
 
@@ -237,6 +237,7 @@ main {
   background: #fe142f;
   color: #fff;
   font-size: 0.875rem;
+  font-family: var(--font-default);
   font-weight: 500;
   text-align: center;
   cursor: pointer;
@@ -481,6 +482,7 @@ fieldset {
     background: none;
   }
   .content {
+    max-width: 100%;
     height: calc(100% - 79px);
     margin-top: 79px;
     margin-bottom: 0;

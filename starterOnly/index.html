@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>Reservation</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@500&display=swap"
     rel="stylesheet">
   <!-- Custom style-->
-  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
@@ -19,13 +19,13 @@
     <div class="container">
       <div class="topnav" id="myTopnav">
         <div class="header-logo">
-          <img alt="logo" src="./assets/Logo.png" width="auto" height="auto" />
+          <img alt="logo" src="./assets/Logo.svg" height="50">
         </div>
-        <nav class="main-navbar" role="list">
-          <a href="#" role="listitem" class="active"><span>Détails de l'évènement</span></a>
-          <a href="#" role="listitem"><span>À propos</span></a>
-          <a href="#" role="listitem"><span>Contact</span></a>
-          <a href="#" role="listitem"><span>Évènements passés</span></a>
+        <nav class="main-navbar">
+          <a href="#" class="active"><span>Détails de l'évènement</span></a>
+          <a href="#"><span>À propos</span></a>
+          <a href="#"><span>Contact</span></a>
+          <a href="#"><span>Évènements passés</span></a>
           <a href="javascript:void(0);" class="icon" onclick="editNav()">
             <span></span>
             <span></span>
@@ -53,7 +53,7 @@
           </button>
         </div>
         <div class="hero-img">
-          <img src="./assets/bg_img.jpg" alt="img" />
+          <img src="./assets/bg_img.jpg" alt="img">
         </div>
         <button class="btn btn-signup js-modal-btn">
           je m'inscris
@@ -132,7 +132,7 @@
                 <div class="checkbox-wrapper">
                   <input class="checkbox-input" type="checkbox" id="checkbox1" checked
                     aria-describedby="checkbox1-error">
-                  <label class="checkbox2-label" for="checkbox1" required>
+                  <label class="checkbox2-label" for="checkbox1">
                     <span class="checkbox-icon"></span>
                     J'ai lu et accepté les conditions d'utilisation.
                   </label>
@@ -150,7 +150,7 @@
                   </label>
                 </div>
               </div>
-              <input class="btn btn-submit" type="submit" class="button" value="C'est parti">
+              <input class="btn btn-submit" type="submit" value="C'est parti">
             </form>
             <div id="confirmation-message" class="confirmation-message d-none">
               <p class="message">Merci pour votre inscription</p>
