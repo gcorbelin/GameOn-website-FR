@@ -332,6 +332,7 @@ main {
   margin-bottom: 13px;
 }
 .form-data-horizontal {
+  position: relative;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 8px 12px;
@@ -372,6 +373,7 @@ fieldset {
 }
 
 .checkbox-wrapper {
+  position: relative;
   margin-bottom: 8px;
 }
 .checkbox-label,
@@ -417,7 +419,12 @@ fieldset {
   opacity: 0;
 }
 .checkbox-input {
-  display: none;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 26px;
+  height: 26px;
+  opacity: 0;
 }
 .checkbox-input:checked + .checkbox-label .checkbox-icon::after,
 .checkbox-input:checked + .checkbox2-label .checkbox-icon::after {
