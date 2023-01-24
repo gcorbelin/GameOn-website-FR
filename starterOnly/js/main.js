@@ -94,6 +94,8 @@ function validate(event) {
   if (isFormValid) {
     form.classList.add("d-none");
     confirmation.classList.remove("d-none");
+    // Empty form
+    form.reset();
   }
 }
 
