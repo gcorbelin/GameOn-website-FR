@@ -114,10 +114,7 @@ function handleError(elem, isValid) {
 
 // Check input value length
 function validateLength(string) {
-  if (string.length >= 2) {
-    return true;
-  }
-  return false;
+  return string.length >= 2;
 }
 
 // Check email format
@@ -142,24 +139,15 @@ function validateDate(date) {
 // Check if value is a number
 function validateNumber(number) {
   let num = parseInt(number);
-  if (!isNaN(number) && num >= 0) {
-    return true;
-  }
-  return false;
+  return !isNaN(number) && num >= 0;
 }
 
 // Check if a radio is checked
 function validateRadio(radios) {
-  if (document.querySelector(radios)) {
-    return true;
-  }
-  return false;
+  return document.querySelector(radios) !== null;
 }
 
 // Check if a specific checkbox is checked
 function validateCGU(checkbox) {
-  if (checkbox.checked) {
-    return true;
-  }
-  return false;
+  return checkbox.checked;
 }
